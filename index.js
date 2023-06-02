@@ -1,4 +1,4 @@
-
+const body = document.getElementById('body');
 const load_timeout = setTimeout(load_navbar, 1000)
 var time_num = -1
 const navbar_icon = $("#navbar-button-wrapper")
@@ -28,7 +28,7 @@ setInterval(function() {
 }, 500)
 
 window.onclick = function(event) {
-    console.log(event.target)
+    // console.log(event.target)
 
     if (event.target == navbar_bars) {
 
@@ -42,7 +42,17 @@ window.onclick = function(event) {
         make_navbar_button_appear()
         make_modal_background_disappear()
         $(".navbar-panel").removeClass("visible")
+
+    
 }
+
+    document.querySelectorAll(".fa-solid fa-circle").forEach(check => {
+        if (event.target == check) {
+            console.log(check)
+        }
+    })
+
+  
 }
 
 
@@ -136,6 +146,24 @@ const observer = new IntersectionObserver(function(entries, observer) {
 middle_elements.forEach(element => {
     observer.observe(element);
 })
+
+var time = 0;
+var hover = 0;
+var out = 0;
+
+function getInTime() {
+  hover = Date.now();
+}
+
+function getOutTime() {
+  out = Date.now();
+  time = out-hover;
+  console.log(time)
+
+  if (time > 500) {
+    window.location.replace("https://github.com/XDagging")
+  }
+}
 
 
 

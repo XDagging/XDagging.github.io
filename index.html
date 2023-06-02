@@ -3,7 +3,7 @@
     <script src="https://kit.fontawesome.com/4b5fb2d64e.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="body">
     <div class="navbar-button" id="navbar-button-wrapper">
         <i class="fa-solid fa-bars fa-2xl" id="navbar-button"></i>
     </div>
@@ -12,14 +12,14 @@
 </div>
     <div class="navbar-panel">
         <div class="navbar-wrapper">
-            <div class="navbar-element" id="logo-element">
-                <p class="font-1 lg bold white">Sebastian H.</p>
+            <!-- <div class="navbar-element" id="logo-element">
+                <p class="font-1 lg bold white">Sebastian</p>
+            </div> -->
+            <div class="navbar-element">
+                <h1 class="font-2 lg bold white"><a class="white" href="#contact-me"><i class="fa-solid fa-id-card-clip"></i></a></h1>
             </div>
             <div class="navbar-element">
-                <h1 class="font-2 lg bold white"><a class="white" href="#contact-me">Contact me</a></h1>
-            </div>
-            <div class="navbar-element">
-                <h1 class="font-2 lg bold white"><a class="white" href="#recent-endeavors">Recent Endeavors</a></h1>
+                <h1 class="font-2 lg bold white"><a class="white" href="#recent-endeavors"><i class="fa-solid fa-diagram-project"></i></a></h1>
             </div>
             <div class="navbar-element">
                 
@@ -65,7 +65,7 @@
     <div class="middle-grid">
         
         <div class="middle-element" id="left">
-            <h1>Made a mock dating app for my school. The app had matching features as well as email verification before signing up.</h1>
+            <p class="font-1 sm">Made a mock dating app for my school. The app had matching features as well as email verification before signing up. The app had ways to contact one another as well. Github can be found <u><a href="https://github.com/XDagging/communitywebapp">here.</a></u></p>
         </div>
         <div class="middle-element">
         </div>
@@ -73,13 +73,13 @@
         </div>
          
         <div class="middle-element" id="right">
-            <h1>Made a personal blog website that allowed users to comment and like on posts.</h1>
+            <p class="font-1 sm">Made a personal blog website that allowed users to comment and like on posts.</p>
             
         </div>
     
  
         <div class="middle-element" id="left">
-            <h1>Made a gaming website in which users could create accounts and login to play unblocked games on their chromebooks</h1>
+            <p class="font-1 sm">Made a gaming website in which users could create accounts and login to play unblocked games on their chromebooks.</p>
             
         </div>
         <div class="middle-element">
@@ -103,11 +103,10 @@
 
     <div class="contact-grid">
         
-        <div class="contact-element">
+        <div class="contact-element" onmouseout="getOutTime()" onmouseenter="getInTime()">
             <div class="contact-inner">
                 <i class="fa-brands fa-github white fa-4x"></i>
                 <p class="font-3 lg contact-margin"><a class="white" href="https://github.com/XDagging">Github</a></p>
- 
             </div>
     
 

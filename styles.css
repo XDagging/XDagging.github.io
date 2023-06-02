@@ -6,6 +6,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     scroll-behavior: smooth;
+
 }
 
 .font-1 {
@@ -68,15 +69,25 @@ body {
     opacity: 1 !important;
 }
 
+.navbar-wrapper {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+
+}
+
 
 .navbar-panel {
     display: none;
     position: fixed;
     z-index: 2;
-    width: 20%;
+    width: 10%;
     background-color: black;
     text-align: left;
     height: 100%;
+    max-width: 116px;
 }
 
 .invisible {
@@ -111,8 +122,9 @@ body {
 
 
 .main-content {
-    width: 80%;
-    margin-left: 20%;
+    width: 90%;
+    margin-left: 10%;
+    margin-right: auto;
 }
 
 .container-grid {
@@ -203,7 +215,6 @@ body {
 .middle-container {
     margin-top: 25%;
 
-
 }
 
 
@@ -253,7 +264,13 @@ a {
     background-color: black;
     width: 100%;
     height: 100%;
+    transition: all 100ms;
 
+}
+
+
+.contact-element:hover {
+    transform: rotate(45deg);
 }
 
 .contact-grid {
@@ -293,4 +310,8 @@ a {
 
 h1 {
     color: black;
+}
+
+.contact-hidden {
+    z-index: -1;
 }
