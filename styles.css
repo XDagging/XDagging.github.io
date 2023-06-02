@@ -5,6 +5,7 @@
 body {
     overflow-x: hidden;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 .font-1 {
@@ -64,6 +65,7 @@ body {
 
 .visible {
     display: block !important;
+    opacity: 1 !important;
 }
 
 
@@ -200,6 +202,8 @@ body {
 
 .middle-container {
     margin-top: 25%;
+
+
 }
 
 
@@ -211,10 +215,10 @@ body {
 
 .middle-grid {
     display: grid;
-    justify-items: center;
+    justify-items: start;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 5vh;
+    row-gap: 10vh;
 
 }
 
@@ -223,7 +227,7 @@ body {
 }
 
 
-a {
+a { 
     text-decoration: none;
     color: black;
 }
@@ -237,7 +241,7 @@ a {
 
 @media only screen and (max-width: 1600px) {
     .xxxl {
-        font-size: 4rem;
+        font-size: 5rem;
     }    
 }
 
@@ -276,4 +280,17 @@ a {
 
 .footer-container {
     margin-top: 10%;
+}
+
+
+.bottom-section {
+    margin-top: 10%;
+}
+
+
+
+
+
+h1 {
+    color: black;
 }

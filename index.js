@@ -70,16 +70,76 @@ function typewriter() {
     const console_text = 'print("2+ years of experience")'
 
     const speed = 100;
-    console.log(console_text.length)
+
     if (i < console_text.length) {
-        console.log(document.getElementById("coding-text").innerHTML)
+
         document.getElementById("coding-text").innerHTML += console_text.charAt(i);
 
-        console.log(i)
+
         i = i + 1;
         setTimeout(typewriter, speed);
     }
 }
+
+
+
+
+
+const middle_elements = document.querySelectorAll(".middle-element")
+
+const options = {
+    root: null, //This means that it is checking if its on the viewport
+    threshold: 0.5
+    // rootMargin: "0px" //This means that the api will be fired up 150opx before the element is actually in the viewport. Works exactly like margin does in css
+}
+
+const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        var element_in_viewport = entry.target
+        console.log(entry.isIntersecting)
+
+        if (entry.isIntersecting == false) {
+            console.log("opacity 0")
+            element_in_viewport.style.opacity = 0;
+        }
+
+
+
+        if (entry.isIntersecting == true) {
+            let element = element_in_viewport;
+            let opacity = 0;
+            let fadeIn = setInterval(() => {
+                element.style.opacity = opacity
+                opacity += 0.01;
+                console.log("this is happening")
+                if (opacity >= 1) {
+                    clearInterval(fadeIn);
+                    opacity = 0;
+                }
+            }, 10);
+
+            if (opacity >= 1) {
+                clearInterval(fadeIn);
+                opacity = 0;
+            }
+
+        }  
+       
+
+        // Here you put the code to what happens to the elements
+    })
+}, options)
+
+
+
+
+middle_elements.forEach(element => {
+    observer.observe(element);
+})
+
+
+
+// The code above can be used to put a lot of observers on elements that the functions applies to
 
 
 
