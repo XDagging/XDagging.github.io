@@ -269,9 +269,9 @@ a {
 }
 
 
-.contact-element:hover {
-    transform: rotate(45deg);
-}
+/* .contact-element:hover {
+    transform: rotate(45deg); */
+/* } */
 
 .contact-grid {
     display: grid;
