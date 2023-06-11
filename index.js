@@ -147,23 +147,23 @@ middle_elements.forEach(element => {
     observer.observe(element);
 })
 
-var time = 0;
-var hover = 0;
-var out = 0;
+// var time = 0;
+// var hover = 0;
+// var out = 0;
 
-function getInTime() {
-  hover = Date.now();
-}
+// function getInTime() {
+//   hover = Date.now();
+// }
 
-function getOutTime() {
-  out = Date.now();
-  time = out-hover;
-  console.log(time)
+// function getOutTime() {
+//   out = Date.now();
+//   time = out-hover;
+//   console.log(time)
 
-  if (time > 500) {
-    window.location.replace("https://github.com/XDagging")
-  }
-}
+//   if (time > 500) {
+//     window.location.replace("https://github.com/XDagging")
+//   }
+// }
 
 
 
